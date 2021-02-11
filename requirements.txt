@@ -1,4 +1,4 @@
-mce-spec-inference == "0.1.0"
+
 python == "^3.7"
 attrs == "^19.3"
 bdd2dfa == "^0.4.0"
