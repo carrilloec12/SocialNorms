@@ -29,8 +29,6 @@ hypothesis==4.42
 ipython==7.13.0
 matplotlib==3.2.1
 notebook==6.0.3
-py-aiger-gridworld==0.3.0
-py-aiger-ptltl==3.0.0
 pytest-cov==2.7
 pytest-flake8==1.0
 pytest-xdist==1.29
