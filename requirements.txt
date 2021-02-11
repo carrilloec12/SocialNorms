@@ -2,27 +2,9 @@ mce-spec-inference==0.1.0
 
 bidict==0.18.3
 dfa==2.0.0
-py-aiger==6.1.0
-py-aiger-bdd==3.0.0
-py-aiger-bv==4.1.0
-py-aiger-coins==2.2.0
-py-aiger-sat==3.0.0
 scipy==1.4.1
 
-attrs==19.3.0
-bdd2dfa==0.4.1
-blessings==1.7
-dd==0.5.5
-funcy==1.14
-lazytree==0.3.1
-multiprocess==0.70.9
-py-aiger-cnf==3.0.0
-py-aiger-coins==1.4.0
-py-aiger-gridworld==0.2.0
-py-aiger-ptltl==1.2.0
-py-aiger-sat==1.1.0
-termplotlib==0.2.4
-mce-spec-inference==0.1.0
+
 
 attrs==19.3.0
 bdd2dfa==0.4.1
