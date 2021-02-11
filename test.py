@@ -72,24 +72,15 @@ def print_map(sensor):
 	"""Scan the board row by row and print colored tiles."""
 	order = range(1, 9)
 	for y in order:
-		print(ap_at_state(x, y, sensor, in_ascii=True) for x in order)
 		chars = (ap_at_state(x, y, sensor, in_ascii=True) for x in order)
-		#print(chars)
-		#display_html(html_print('&nbsp;'.join(chars)))
+		obj = html_print('&nbsp;'.join(chars))
+		display_html(obj)
 		
 
 def main():
 	print("START")
-
 	X = BV.atom(8, 'x', signed=False)
 	Y = BV.atom(8, 'y', signed=False)
-
-	DYN = GW.gridworld(8, start=(3, 5), compressed_inputs=True)
-
-	SLIP = BV.atom(1, 'c', signed=False).repeat(2) & BV.atom(2, 'a', signed=False)
-	SLIP = SLIP.with_output('a').aigbv
-	DYN2 = C.coin((31, 32), 'c') >> C.circ2mdp(DYN << SLIP)
-
 	APS = {       #            x-axis       y-axis
 		'yellow': mask_test(0b1000_0001, 0b1000_0001, X, Y),
 		'blue':   mask_test(0b0001_1000, 0b0011100, X, Y),
@@ -100,10 +91,8 @@ def main():
 
 	SENSOR = create_sensor(APS)
 
-	
-	print("SUCCESS")
 	print_map(SENSOR)
-
+	print("SUCCESS")
 	# for i, trc in enumerate(set(TRACES)):
 	# 	print()
 	# 	print(f'trace {i}')
